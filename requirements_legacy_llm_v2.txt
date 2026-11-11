@@ -1,0 +1,15 @@
+# For LLM_Training_Fixed_v2.py ONLY. Use a separate Python 3.12 environment.
+# These EXACT versions are checked by the script before any model is loaded.
+torch>=2.2,<2.6
+transformers==4.40.0
+trl==0.8.6
+peft==0.10.0
+datasets==2.18.0
+accelerate==0.29.0
+numpy>=1.24,<2.0
+pyarrow>=14,<21
+# Notebook support
+ipykernel>=6.29,<7
+nbformat>=5.10
+# Optional GPU-only 4-bit quantization: install bitsandbytes separately
+# after confirming compatibility with your OS, CUDA wheel and GPU.
