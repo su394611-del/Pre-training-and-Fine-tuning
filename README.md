@@ -1,6 +1,6 @@
 # LLM Fine-Tuning Examples: Qwen LoRA, SFT, DPO and ORPO
 
-Two educational PyTorch / Hugging Face LLM post-training workflows, accompanied by standalone Python programs, interactive Jupyter notebooks and example data:
+Two  PyTorch / Hugging Face LLM post-training workflows, accompanied by standalone Python programs, interactive Jupyter notebooks and example data:
 
 1. **Qwen2.5-0.5B-Instruct + LoRA**: fine-tune a causal language model on 49 *Alien: Romulus* instruction/answer examples.
 2. **SFT → DPO or ORPO**: demonstrate instruction fine-tuning and preference optimization using a separate, explicitly version-pinned TRL 0.8.6 stack. The default model is `HuggingFaceTB/SmolLM-135M`.
@@ -54,7 +54,7 @@ python -m pip check
 # Fast validation; this does not download model weights
 python qwen_alien_romulus_finetune.py --validate-data
 
-# Full educational training run (5 epochs by default)
+# Full training run (5 epochs by default)
 python qwen_alien_romulus_finetune.py
 
 # Smaller resource-saving run
@@ -68,7 +68,7 @@ If PowerShell blocks activation, use the environment's Python directly: ` .\.ven
 `data/alien_romulus_qa.jsonl` contains exactly one JSON object per line:
 
 ```json
-{"instruction":"What is Alien: Romulus about?","output":"Alien: Romulus is a science fiction horror film in the Alien franchise. A group of young colonists explore a derelict space station and encounter the deadly Xenomorph species."}
+{"instruction": "What is Alien: Romulus about?","output":"Alien: Romulus is a science fiction horror film in the Alien franchise. A group of young colonists explore a derelict space station and encounter the deadly Xenomorph species."}
 ```
 
 Both fields are required, and their values must be nonempty strings. The validator identifies malformed JSON and invalid records with line numbers.
@@ -88,7 +88,7 @@ Both fields are required, and their values must be nonempty strings. The validat
 | Mixed precision | FP16 on CUDA, FP32 on CPU |
 | Output folder | `qwen_alien_romulus_finetuned/` |
 
-**Important:** The Qwen example uses `DataCollatorForLanguageModeling` and computes causal language-model loss over both prompt and assistant tokens. It is an educational LoRA fine-tuning example, **not** a completion-only-masked SFT pipeline. With LoRA enabled, the saved folder contains adapter weights, which require the base Qwen checkpoint for inference. The example does not evaluate on a held-out validation set.
+**Important:** The Qwen example uses `DataCollatorForLanguageModeling` and computes causal language-model loss over both prompt and assistant tokens. It is a LoRA fine-tuning example, **not** a completion-only-masked SFT pipeline. With LoRA enabled, the saved folder contains adapter weights, which require the base Qwen checkpoint for inference. The example does not evaluate on a held-out validation set.
 
 ## Workflow B — Legacy SFT → DPO or ORPO
 
@@ -135,7 +135,7 @@ python -m ipykernel install --user --name qwen-lora --display-name "Python (Qwen
 
 Run that command in the Qwen environment, then repeat in the legacy environment with `--name legacy-trl --display-name "Python (Legacy TRL)"`.
 
-**Google Colab:** The Qwen notebook is the better choice for a recent hosted GPU runtime. Copy the project files into your Colab working directory, install `requirements.txt` and select a GPU runtime. The legacy TRL 0.8.6 stack may require an older compatible runtime and is not guaranteed to run against Colab's default preinstalled packages.
+**Google Colab:** The Qwen notebook is the better choice for a recent hosted GPU runtime. Copy the project files into your Colab working directory, install `requirements.txt,` and select a GPU runtime. The legacy TRL 0.8.6 stack may require an older compatible runtime and is not guaranteed to run against Colab's default preinstalled packages.
 
 ## Troubleshooting
 
@@ -167,4 +167,4 @@ Run that command in the Qwen environment, then repeat in the legacy environment 
 
 The included movie-related question/answer examples are illustrative, and factual statements have not been independently fact-checked. Review rights and licenses for any training data before redistribution. Hugging Face pretrained models have their own licenses; see each model card. This repository does not grant rights to third-party model weights or movie-related intellectual property.
 
-No project-wide software license is asserted by this README. Add a `LICENSE` file on GitHub if you choose to publish this project under a specific license.
+This README does not assert a project-wide software license. Add a `LICENSE` file on GitHub if you choose to publish this project under a specific license.
