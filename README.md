@@ -167,4 +167,4 @@ Run that command in the Qwen environment, then repeat in the legacy environment 
 
 The included movie-related question/answer examples are illustrative, and factual statements have not been independently fact-checked. Review rights and licenses for any training data before redistribution. Hugging Face pretrained models have their own licenses; see each model card. This repository does not grant rights to third-party model weights or movie-related intellectual property.
 
-This README does not assert a project-wide software license.© 2026 Sudhanshu Shukla · Licensed under the Apache License, Version 2.0
+This project is licensed under the Apache License, Version 2.0.© 2026 Sudhanshu Shukla · Licensed under the Apache License, Version 2.0
