@@ -5,7 +5,7 @@ Two  PyTorch / Hugging Face LLM post-training workflows, accompanied by standalo
 1. **Qwen2.5-0.5B-Instruct + LoRA**: fine-tune a causal language model on 49 *Alien: Romulus* instruction/answer examples.
 2. **SFT → DPO or ORPO**: demonstrate instruction fine-tuning and preference optimization using a separate, explicitly version-pinned TRL 0.8.6 stack. The default model is `HuggingFaceTB/SmolLM-135M`.
 
-> **:** The examples use very small datasets. Training loss or example generations cannot demonstrate general model quality. The project does **not** implement PPO, even though it is preference-optimization.
+> **:** The examples use very small datasets. Training loss or example generations cannot demonstrate the model's general quality. The project does **not** implement PPO, even though it is preference optimization.
 
 ## Project contents
 
@@ -167,4 +167,4 @@ Run that command in the Qwen environment, then repeat in the legacy environment 
 
 The included movie-related question/answer examples are illustrative, and factual statements have not been independently fact-checked. Review rights and licenses for any training data before redistribution. Hugging Face pretrained models have their own licenses; see each model card. This repository does not grant rights to third-party model weights or movie-related intellectual property.
 
-This README does not assert a project-wide software license. Add a `LICENSE` file on GitHub if you choose to publish this project under a specific license.
+This README does not assert a project-wide software license.© 2026 Sudhanshu Shukla · Licensed under the Apache License, Version 2.0
