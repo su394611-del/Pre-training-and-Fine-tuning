@@ -1,5 +1,4 @@
 # LLM Fine-Tuning Examples: Qwen LoRA, SFT, DPO and ORPO
-
 Two  PyTorch / Hugging Face LLM post-training workflows, accompanied by standalone Python programs, interactive Jupyter notebooks and example data:
 
 1. **Qwen2.5-0.5B-Instruct + LoRA**: fine-tune a causal language model on 49 *Alien: Romulus* instruction/answer examples.
