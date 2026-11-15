@@ -123,7 +123,7 @@ The optional `microsoft/phi-2` path is substantially more memory-intensive. A co
 
 Both `.ipynb` files contain the corresponding Python logic directly rather than relying only on `%run` wrappers. They deliberately **do not start model training by default**; each has an opt-in `RUN_TRAINING` flag.
 
-1. In VS Code or JupyterLab, open `qwen_alien_romulus_finetune.ipynb` and choose the **`.venv-qwen`** kernel. It validates the JSONL dataset first. Set `RUN_TRAINING = True` in the training cell to download Qwen and begin training.
+1. In VS Code or JupyterLab, open `qwen_Alien_Romulus_Fine_Tuning.ipynb` and choose the **`.venv-qwen`** kernel. It validates the JSONL dataset first. Set `RUN_TRAINING = True` in the training cell to download Qwen and begin training.
 2. Open `LLM_Training_Fixed_v2.ipynb` with the **`.venv-legacy`** kernel. Run the dataset-validation cells first. Set `RUN_TRAINING = True` in its final cell and choose `TRAINING_MODE = "sft-dpo"` or `"orpo"` to train.
 
 To register environments as notebook kernels:
