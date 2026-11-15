@@ -51,16 +51,16 @@ python -m pip install -r requirements.txt
 python -m pip check
 
 # Fast validation; this does not download model weights
-python qwen_alien_romulus_finetune.py --validate-data
+python qwen_alien_romulus_finetune_fixed.py --validate-data
 
 # Full training run (5 epochs by default)
-python qwen_alien_romulus_finetune.py
+python qwen_alien_romulus_finetune_fixed.py
 
 # Smaller resource-saving run
-python qwen_alien_romulus_finetune.py --epochs 1 --max-length 128 --batch-size 1
+python qwen_alien_romulus_finetune_fixed.py --epochs 1 --max-length 128 --batch-size 1
 ```
 
-If PowerShell blocks activation, use the environment's Python directly: ` .\.venv-qwen\Scripts\python.exe qwen_alien_romulus_finetune.py --validate-data`.
+If PowerShell blocks activation, use the environment's Python directly: ` .\.venv-qwen\Scripts\python.exe qwen_alien_romulus_finetune_fixed.py --validate-data`.
 
 ### Dataset format
 
