@@ -13,8 +13,8 @@ Two  PyTorch / Hugging Face LLM post-training workflows, accompanied by standalo
 ├── README.md
 ├── requirements.txt                       # Modern Qwen / Transformers 5.x environment
 ├── requirements_legacy_llm_v2.txt         # Separate, legacy SFT/DPO/ORPO environment
-├── qwen_alien_romulus_finetune.py         # Qwen training + JSONL validation
-├── qwen_alien_romulus_finetune.ipynb      # Equivalent interactive Qwen implementation
+├── qwen_alien_romulus_finetune_fixed.py        # Qwen training + JSONL validation
+├── qwen_Alien_Romulus_Fine_Tuning.ipynb   # Equivalent interactive Qwen implementation
 ├── LLM_Training_Fixed_v2.py              # User-supplied legacy SFT/DPO/ORPO CLI
 ├── LLM_Training_Fixed_v2.ipynb           # Equivalent interactive legacy implementation
 ├── data/
