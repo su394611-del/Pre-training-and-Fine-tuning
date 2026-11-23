@@ -19,15 +19,13 @@ Two  PyTorch / Hugging Face LLM post-training workflows, accompanied by standalo
 ├── LLM_Training_Fixed_v2.ipynb           # Equivalent interactive legacy implementation
 ├── data/
 │   └── alien_romulus_qa.jsonl            # 49 valid JSONL lines
-├── original_sources/
-│   ├── qwen_alien_romulus_finetune_original.py
-│   └── alien_romulus_qa_pretty_not_jsonl.txt
-└── .gitignore
+├── data.zip                             # Original uploaded archive
+└── docs/                               # GitHub Pages source
 ```
 
-The source files are preserved in `original_sources/` for reference. The top-level Qwen script has small usability updates: a standalone data-validation mode, adjustable training arguments, and Transformers 5. x-compatible `warmup_steps=0.03` in place of the older `warmup_ratio` field. The original uploaded dataset was a sequence of **multi-line JSON objects**, not actual JSONL; the tracked `data/alien_romulus_qa.jsonl` is normalized to **one object per line**.
+The Qwen script supports standalone data validation and adjustable training arguments. It uses fractional `warmup_steps=0.03` with Transformers 5.x. The original uploaded dataset was a sequence of **multi-line JSON objects**, not actual JSONL; the tracked `data/alien_romulus_qa.jsonl` is normalized to **one object per line**.
 
-The additional uploaded `data.zip` includes other datasets/corpora not consumed by either training program. It is intentionally not republished in this minimal GitHub project; add other data only after checking its licensing and provenance.
+The repository also contains the original `data.zip`. Both training programs use the inputs documented above.
 
 ## Requirements and supported environments
 
