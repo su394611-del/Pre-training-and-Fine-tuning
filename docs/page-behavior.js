@@ -1,0 +1,6 @@
+(function(){'use strict';
+ const toggle=document.getElementById('menuButton');const nav=document.getElementById('nav');
+ if(toggle&&nav)toggle.addEventListener('click',function(){const open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');toggle.textContent=open?'×':'☰';});
+ if(toggle&&nav)nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');toggle.textContent='☰';}));
+ document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async function(){const code=this.closest('.code-panel').querySelector('code');try{if(!navigator.clipboard||!window.isSecureContext)throw Error('No clipboard');await navigator.clipboard.writeText(code.innerText);this.textContent='Copied';}catch(e){const range=document.createRange(),sel=window.getSelection();range.selectNodeContents(code);sel.removeAllRanges();sel.addRange(range);this.textContent='Selected';}this.setAttribute('aria-label',this.textContent+' code');}));
+})();
